@@ -20,6 +20,8 @@ header {
   color: navy;
   text-shadow: 2px 2px #fba087;
   font-size: 5vw;
+  position: relative;
+  top: 150px;
 }
 
 .logo h1 {
