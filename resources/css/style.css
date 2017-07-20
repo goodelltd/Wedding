@@ -1,0 +1,45 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  color: aquamarine;
+  text-shadow: 2px 2px #000000;
+  font-size: 6vw;
+  position: relative;
+  height: 400px;
+  display: block;
+  background-image: url('https://www.hawaii-aloha.com/wp-content/uploads/2017/04/Lanikai_beach_Oahu_Hawaii.jpg');
+  background-size: cover;
+  background-position: center;
+  border-right: 0;
+  line-height: 400px;
+
+  }
+
+}
+span {
+   margin-top: -150px;
+   margin-left: 20px;
+   width: 700px;
+}
+
+h2 {
+  font-family: Helvetica,sans-serif;
+  font-size: 20px;
+}
+
+form {
+  font-family: Helvetica,sans-serif;
+  display: block;
+}
+
+#name, #address {
+  margin-right: 30px;
+}
+
+#submit {
+  margin-top: 30px;
+  background-color: lightblue;
+}
