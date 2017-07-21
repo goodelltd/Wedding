@@ -5,7 +5,7 @@ body {
   margin-bottom: 10px;
   border: 0;
   text-align: center;
-  font-family: myFirstFont;
+  font-family: Poiret;
 }
 
 header {
@@ -18,72 +18,66 @@ header {
 
  h1 {
   color: navy;
-  text-shadow: 2px 2px #fba087;
-  font-size: 5vw;
+  text-shadow: 2px 2px #000000;
+  font-size: 80px;
   position: relative;
-  top: 150px;
-}
-
-.logo h1 {
-  color: navy;
-  text-shadow: 2px 2px #fba087;
-  font-size: 5vw;
-  vertical-align: middle;
-}
-
-h2 {
-  font-size: 1vw;
-  margin-top: 500px;
+  top: 180px;
 }
 
 h3 {
   font-size:70px;
 }
 
-div {
-  display: block;
-  top: 120px;
-  padding-top: 120px;
+h2 {
+  font-size: 40px;
 }
 
-form {
-  font-family: Helvetica,sans-serif;
-  display: block;
+.logo h1 {
+  color: navy;
+  text-shadow: 2px 2px #fba087;
+  font-size: 7vw;
+  vertical-align: middle;
+}
+
+#date {
+  font-size: 40px;
+  margin-top: 500px;
+  position: relative;
+  bottom: 30px;
+}
+
+
+div {
+  padding: 0;
+  margin-top: 120px;
 }
 
 .registry {
-  font-family: Helvetica, sans-serif;
+  font-family: helvetica;
   font-size: 20px;
   background-color: #F2F2F2;
   display: block;
-  margin: 0;
-  padding: 0;
+  padding: 80px;
 }
 
-.registry h4{
+.registry h4 {
+  font-family: Poiret;
   font-size: 40px;
   vertical-align: middle;
   margin: 10px;
   padding: 5px;
 }
 
-.registry h4{
-  font-size: 40px;
-  vertical-align: middle;
-  margin: 10px;
-  padding: 5px;
+.about img {
+  width: 30%;
+  height: auto;
 }
 
-
-#name, #address {
-  margin-right: 30px;
-}
-
-#submit {
-  margin-top: 30px;
-  background-color: lightblue;
+#rockon {
+  width: 39%;
+  height: auto%;
 }
 
 #amp {
-  font-size: 3vw;
+  font-size: 50px;
 }

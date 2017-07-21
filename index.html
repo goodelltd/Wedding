@@ -4,12 +4,20 @@
     <meta charset="utf-8">
     <title>Vicki&amp;Tyler</title>
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/form.css">
     <style>
     @font-face {
         font-family: myFirstFont;
         src: url('./resources/fonts/SpecialElite.ttf');
     }
-
+    @font-face {
+        font-family: Amatic;
+        src: url('./resources/fonts/AmaticSC-Regular.ttf');
+    }
+    @font-face {
+        font-family: Poiret;
+        src: url('./resources/fonts/PoiretOne-Regular.ttf');
+    }
     </style>
     <!--<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'> -->
   </head>
@@ -19,10 +27,13 @@
       <h2 id="date">11.3.17</h2>
     </header>
     <div class="about">
+      <h2>About Us</h2>
+      <img  id="rockon" src="./resources/images/rockonrock.jpg" alt="">
+      <img class="about" src="./resources/images/stairsfinal.png" alt="">
 
     </div>
     <div class="registry">
-      <h4>Wedding Registries</h4>
+      <h4>Wedding Registry</h4>
       <p >We are registered at <a href="https://www.amazon.com">Amazon</a> and <a href="https://www.target.com/">Target</a>. <br> <br>
         Thank you for supporting us in our new life together!</p>
     </div>
@@ -32,7 +43,7 @@
     <div class="event">
 
     </div>
-    <div class="RSVP">
+    <!--<div class="RSVP">
       <h3>RSVP</h3>
       <form>
         <label>
@@ -50,8 +61,26 @@
           </button>
         </p>
       </form>
-  </div>
+  </div> -->
 
+  <div "class="RSVP"">
+    <h3>RSVP</h3>
+    <form>
+      <fieldset>
+        <legend>Personal</legend>
+          <label for="field1"><span>Name<span class="required">*  </span></span><input type="text" class="input-field" name="field1" value="" /></label>
+          <label for="field4"><span>   Entreé<span class="required">*  </span></span><select name="field4" class="select-field">
+            <option value="Appointment">Veggie Salad</option>
+            <option value="Interview">Half Grilled Panini/Side Salad</option>
+            <option value="Regarding a post">Farm Pizza/Side Salad</option>
+            </select>
+          </label>
+        </fieldset> <br>
+        <label><span>&nbsp;</span><input type="submit" value="Submit" /></label>
+      </fieldset>
+      <br> <br>
+    </form>
+</div>
 
   </body>
 </html>
