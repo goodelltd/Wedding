@@ -1,11 +1,9 @@
-body {
-  margin-top: -90px;
-  margin-left: -20px;
-  margin-right: -20px;
-  margin-bottom: 10px;
-  border: 0;
+body, html {
+  padding: 0;
+  margin: 0;
   text-align: center;
   font-family: Poiret;
+  height: 100%;
 }
 
 header {
@@ -14,6 +12,10 @@ header {
   background-position: center;
   padding:0;
   margin-top: 0;
+    /* Full height */
+  height: 100%;
+    /* Center and scale the image nicely */
+  background-repeat: no-repeat;
 }
 
  h1 {
