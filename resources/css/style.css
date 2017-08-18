@@ -3,35 +3,38 @@ body, html {
   margin: 0;
   text-align: center;
   font-family: Poiret;
-  height: 100%;
+  font-size: 16px;
 }
 
 header {
-  background-image: url("../images/beach.jpg");
+  background: url("../images/beach.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center;
   padding:0;
   margin-top: 0;
-    /* Full height */
-  height: 100%;
-    /* Center and scale the image nicely */
-  background-repeat: no-repeat;
+  height: 800px;
 }
 
- h1 {
+
+header h1 {
   color: navy;
-  text-shadow: 2px 2px #000000;
-  font-size: 80px;
+
+  font-size: 4.5rem;
+  font-weight: 600;
   position: relative;
   top: 180px;
 }
 
 h3 {
   font-size:70px;
+  padding: 2rem;
 }
 
 h2 {
   font-size: 40px;
+  padding: 2rem;
 }
 
 .logo h1 {
@@ -46,12 +49,6 @@ h2 {
   margin-top: 500px;
   position: relative;
   bottom: 30px;
-}
-
-
-div {
-  padding: 0;
-  margin-top: 120px;
 }
 
 .registry {
@@ -70,20 +67,56 @@ div {
   padding: 5px;
 }
 
+.about {
+  margin: 2rem auto;
+  padding: 5rem auto;
+}
+
 .about img {
   width: 30%;
   height: auto;
 }
 
-#rockon {
-  width: 39%;
-  height: auto%;
+.about h2 {
+  padding: 2rem;
 }
 
 #amp {
   font-size: 50px;
 }
 
+.registry h4 {
+  padding: 2rem;
+}
+
+.registry .content {
+  padding: 5rem;
+}
+
 .RSVP {
-  height: 1000px;
+  padding: 10rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.rsvps {
+  justify-content: center;
+}
+
+table {
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 1.5rem;
+}
+
+td,tr,th {
+  border: 1px black solid;
+  padding: .4rem;
+  text-align: left;
+}
+
+button {
+  margin-bottom: 4rem;
 }
