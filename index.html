@@ -39,105 +39,82 @@
   </div>
   <div "class="RSVP"">
     <h3>RSVP</h3>
-     <!-- <table id="myTable">
-       <tr>
-         <td>Name:</td>
-         <td>Attending</td>
-         <td>Entreé</td>
-       </tr>
-       <tr>
-         <td><input type="text" name="data[0][name]" value="" id="name0" /></td>
-         <td>
-           <select name="data[0][attending]" id="attending1">
-             <option value="1" class="attendingyes">Yes</option>
-             <option value="0" class="attendingno">No</option>
-           </select>
-         </td>
-         <td>
-           <select name="field4" class="select-field">
-             <option value="Appointment">Veggie Salad</option>
-             <option value="Interview">Half Grilled Panini/Side Salad</option>
-             <option value="Regarding a post">Farm Pizza/Side Salad</option>
-           </select>
-         </td>
-       </tr>
-     </table>
-<br>
 
-<button onclick="myCreateFunction()">Add Guest</button>
-<button onclick="myDeleteFunction()">Delete row</button>
+    <button onclick="myCreateFunction()">Add Guest</button>
+    <button onclick="myDeleteFunction()">Delete Guest</button>
+    <form id="gform" method="post" name="gform"
+      action="https://script.google.com/macros/s/AKfycbw5eSYhVXNpg-1nF_VFRHVa9LIjfPkMISTlWjgYppPIzY22_Tk/exec">
+    <table id="myTable">
+      <tr>
+        <td>First &amp; Last Name:</td>
+        <td>Entreé</td>
+      </tr>
+      <tr>
+        <td><input type="text" name="Name" value="" id="name0" /></td>
+        <td>
+            <select name="Entree" class="select-field" id="food">
+              <option value="Salad">Veggie Salad</option>
+              <option value="Panini">Half Grilled Panini/Side Salad</option>
+              <option value="FarmPizza">Farm Pizza/Side Salad</option>
+            </select>
+          </input>
+        </td>
+      </tr>
+    </table>
+    <button class="button-success pure-button button-xlarge">Send</button>
 
-<script>
-function myCreateFunction() {
-    var table = form.getElementById("myTable");
-    var row = table.insertRow(1);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    cell1.innerHTML = "NEW CELL1";
-    cell2.innerHTML = "NEW CELL2";
-    cell3.innerHTML = "NEW CELL3";
+    <br>
+    <script>
+    function myCreateFunction() {
+        var table = document.getElementById("myTable");
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var newText  = document.createElement('input');
+        newText.type = 'text';
+        cell1.appendChild(newText);
+
+        var option1 = document.createElement("option");
+        var element2 = document.createElement("select");
+        var option2 = document.createElement("option");
+        var option3 = document.createElement("option");
+        option1.innerHTML = "Veggie Salad";
+        option1.value = "1";
+        option2.innerHTML = "Half Grilled Panini/Side Salad";
+        option2.value = "2";
+        option3.innerHTML = "Farm Pizza/Side Salad";
+        option3.value = "3";
+        element2.add(option1, null);
+        element2.add(option2, null);
+        element2.add(option3, null);
+        cell2.appendChild(element2);
+    }
+
+    function myDeleteFunction() {
+      var table = document.getElementById("myTable");
+      var rowCount = table.rows.length;
+      if (rowCount > 2) {
+      table.deleteRow(rowCount-1);
+      }
+    }
+    </script>
+    <script type="text/javascript">
+    var myForm = document.getElementById('gform');
+    formData = new FormData(myForm);
+    for(var pair of formData.entries()) {
+   console.log(pair[0]+ ', '+ pair[1]);
 }
-
-function myDeleteFunction() {
-    document.getElementById("myTable").deleteRow(0);
-}
-</script> -->
-
-
-<table id="myTable">
-  <tr>
-    <td>First &amp; Last Name:</td>
-    <td>Entreé</td>
-  </tr>
-  <tr>
-    <td><input type="text" name="data[0][name]" value="" id="name0" /></td>
-    <td>
-      <form>
-        <select name="field4" class="select-field" id="food">
-          <option value="Appointment">Veggie Salad</option>
-          <option value="Interview">Half Grilled Panini/Side Salad</option>
-          <option value="Regarding a post">Farm Pizza/Side Salad</option>
-        </select>
-      </form>
-    </td>
-  </tr>
-</table>
-<br>
-
-<button onclick="myCreateFunction()">Create row</button>
-<button onclick="myDeleteFunction()">Delete row</button>
-
-<script>
-function myCreateFunction() {
-    var table = document.getElementById("myTable");
-    var rowCount = table.rows.length;
-    var row = table.insertRow(rowCount);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var newText  = document.createElement('input');
-    var newSelect = document.getElementById("food");
-
-    newText.type = 'text';
-    cell1.appendChild(newText);
-    cell2.appendChild(newSelect);
-
-}
-
-function myDeleteFunction() {
-
-  var table = document.getElementById("myTable");
-  var rowCount = table.rows.length;
-  if (rowCount > 1) {
-  table.deleteRow(rowCount-1);
-}
-}
-</script>
-
-
-
-
+    </script>
+    <br>
+  </form>
 
   </div>
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for contacting us!
+      We will get back to you soon!</h2>
+  </div>
+
+
 </body>
 </html>
