@@ -53,6 +53,7 @@
         <td><input type="text" name="Name" value="" id="name0" /></td>
         <td>
             <select name="Entree" class="select-field" id="food">
+              <option value="" disabled selected>--Select--</option>
               <option value="Salad">Veggie Salad</option>
               <option value="Panini">Half Grilled Panini/Side Salad</option>
               <option value="FarmPizza">Farm Pizza/Side Salad</option>
@@ -75,8 +76,8 @@
         newText.type = 'text';
         cell1.appendChild(newText);
 
-        var option1 = document.createElement("option");
         var element2 = document.createElement("select");
+        var option1 = document.createElement("option");
         var option2 = document.createElement("option");
         var option3 = document.createElement("option");
         option1.innerHTML = "Veggie Salad";
