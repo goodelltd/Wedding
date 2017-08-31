@@ -3,7 +3,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
     <!-- <script>
     function myCreateFunction() {
       var names = ["Name", "Entree"];
@@ -43,37 +42,49 @@
 
 
 
-    <script>
-      var names = ["Name", "Entree"];
-      function add(tableID) {
-          var table = document.getElementById(tableID);
-          var rowCount = table.rows.length;
-          var row = table.insertRow(rowCount);
-          var colCount = table.rows[0].cells.length;
+<script>
+  var names = ["Name", "Entree"];
+  function add(tableID) {
+      var table = document.getElementById(tableID);
+      var rowCount = table.rows.length;
+      var row = table.insertRow(rowCount);
+      var colCount = table.rows[0].cells.length;
 
-          for (var i=0; i<colCount; i++) {
-              var newcell = row.insertCell(i);
-              if (colCount == 0) {
-              var newentry = document.createElement('textarea');
-              newentry.type = "text";
-              }
-              else if (colCount == 1) {
-              var newentry = document.createElement("select");
-              option1.innerHTML = "item1";
-              option1.value = "1";
-              option2.innerHTML = "item2";
-              option2.value = "2";
-              option3.innerHTML = "item3";
-              option3.value = "3";
-              newentry.add(option1, null);
-              newentry.add(option2, null);
-              newentry.add(option3, null);
-              }
-              newentry.name = names[i];
-              newcell.appendChild(newentry);
-              }
+      for (var i=0; i<colCount; i++) {
+          var newcell = row.insertCell(i);
+          if (i == 0) {
+          var newentry  = document.createElement('input');
+          newentry.type = "text";
           }
-    </script>
+          else if (i == 1) {
+          var newentry = document.createElement("select");
+          var option1 = document.createElement("option");
+          var option2 = document.createElement("option");
+          var option3 = document.createElement("option");
+          option1.innerHTML = "item1";
+          option1.value = "1";
+          option2.innerHTML = "item2";
+          option2.value = "2";
+          option3.innerHTML = "item3";
+          option3.value = "3";
+          newentry.add(option1, null);
+          newentry.add(option2, null);
+          newentry.add(option3, null);
+          }
+          newentry.name = names[i];
+          newcell.appendChild(newentry);
+          }
+      }
+
+      function myDeleteFunction() {
+        var table = document.getElementById("table");
+        var rowCount = table.rows.length;
+        if (rowCount > 2) {
+        table.deleteRow(rowCount-1);
+        }
+      }
+
+</script>
 
 
 

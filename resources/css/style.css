@@ -2,7 +2,7 @@ body, html {
   padding: 0;
   margin: 0;
   text-align: center;
-  font-family: Poiret;
+  font-family: 'Poiret One', cursive;
   font-size: 16px;
 }
 
@@ -44,6 +44,52 @@ h2 {
   vertical-align: middle;
 }
 
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  flex-direction: column;
+}
+
+.galleryimgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  max-width: 700px;
+  max-height: 500px;
+}
+
+.galleryimgs button {
+  height: 30px;
+  width: 30px;
+  border-radius: 20%;
+  display: relative;
+  z-index: 2;
+  background-color: midnightblue;
+  color: white;
+  align-items: center;
+}
+
+.gallery img {
+  display: none;
+  overflow: hidden;
+}
+
+
+#coralcar {
+  display: block;
+}
+
+#refuge, #flowers, #magnolia {
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 #date {
   font-size: 40px;
   margin-top: 500px;
@@ -72,11 +118,6 @@ h2 {
   padding: 5rem auto;
 }
 
-.about img {
-  width: 30%;
-  height: auto;
-}
-
 .about h2 {
   padding: 2rem;
 }
@@ -94,11 +135,14 @@ h2 {
 }
 
 .RSVP {
-  padding: 10rem 0;
+  padding: 13.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-direction: column;
+  height: 100%;
+  width: auto;
 }
 
 .rsvps {
@@ -117,6 +161,12 @@ td,tr,th {
   text-align: left;
 }
 
-button {
+.RSVP button {
   margin-bottom: 4rem;
+  font:inherit
+}
+
+.galbutton button {
+  background-color: midnightblue;
+  color: white;
 }

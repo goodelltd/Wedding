@@ -3,33 +3,97 @@
 <head>
   <meta charset="utf-8">
   <title>Vicki&amp;Tyler</title>
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
   <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
-  <style>
-  @font-face {
-    font-family: myFirstFont;
-    src: url('./resources/fonts/SpecialElite.ttf');
-  }
-  @font-face {
-    font-family: Amatic;
-    src: url('./resources/fonts/AmaticSC-Regular.ttf');
-  }
-  @font-face {
-    font-family: Poiret;
-    src: url('./resources/fonts/PoiretOne-Regular.ttf');
-  }
-  </style>
+  <script>
+    var names = ["Name", "Entree"];
+    function add(tableID) {
+        var table = document.getElementById(tableID);
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+        var colCount = table.rows[0].cells.length;
+
+        for (var i=0; i<colCount; i++) {
+            var newcell = row.insertCell(i);
+            if (i == 0) {
+            var newentry  = document.createElement('input');
+            newentry.type = "text";
+            }
+            else if (i == 1) {
+            var newentry = document.createElement("select");
+            var option1 = document.createElement("option");
+            var option2 = document.createElement("option");
+            var option3 = document.createElement("option");
+            option1.innerHTML = "Veggie Salad";
+            option1.value = "Salad";
+            option2.innerHTML = "Half Grilled Panini/Side Salad";
+            option2.value = "Panini";
+            option3.innerHTML = "Farm Pizza/Side Salad";
+            option3.value = "FarmPizza";
+            newentry.add(option1, null);
+            newentry.add(option2, null);
+            newentry.add(option3, null);
+            }
+            newentry.name = names[i];
+            newcell.appendChild(newentry);
+            }
+        }
+        function myDeleteFunction() {
+          var table = document.getElementById("table");
+          var rowCount = table.rows.length;
+          if (rowCount > 2) {
+          table.deleteRow(rowCount-1);
+          }
+        }
+  </script>
+  <script type="text/javascript">
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1 class="logo">V<span id="amp">&amp;</span>T</h1>
     <h2 id="date">11.3.17</h2>
   </header>
-  <div class="about">
-    <h2>About Us</h2>
-    <img class="about" src="./resources/images/stairsfinal.png" alt="">
 
+  <div class="gallery">
+    <h2>About Us</h2>
+    <div class="galleryimgs">
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <img id="coralcar" class="mySlides" src="./resources/images/stairsfinal.png" style="width:100%">
+      <img id="flowers" class="mySlides" src="./resources/images/flowers.jpg" style="width:100%">
+      <img id="magnolia" class="mySlides" src="./resources/images/magnolia.jpg" style="width:100%">
+      <img id="refuge" class="mySlides" src="./resources/images/refuge.jpg" style="width:100%">
+      <img id="southwest" class="mySlides" src="./resources/images/southwest2.jpg" style="width:100%">
+      <img class="mySlides" src="./resources/images/coralcar.jpg" style="width:100%">
+      <img class="mySlides" src="./resources/images/vickiflowers.jpg" style="width:100%">
+      <img class="mySlides" src="./resources/images/rockonrock2.jpg" style="width:100%">
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+      <br><br>
+      <!-- <div class="galbutton">
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+      </div> -->
+    </div>
   </div>
+
   <div class="registry">
     <div class="content">
       <h4>Wedding Registry</h4>
@@ -37,85 +101,33 @@
         Thank you for supporting us in our new life together!</p>
     </div>
   </div>
-  <div "class="RSVP"">
+
+  <div class="RSVP">
     <h3>RSVP</h3>
-
-    <button onclick="myCreateFunction()">Add Guest</button>
-    <button onclick="myDeleteFunction()">Delete Guest</button>
-    <form id="gform" method="post" name="gform"
-      action="https://script.google.com/macros/s/AKfycbw5eSYhVXNpg-1nF_VFRHVa9LIjfPkMISTlWjgYppPIzY22_Tk/exec">
-    <table id="myTable">
-      <tr>
-        <td>First &amp; Last Name:</td>
-        <td>Entreé</td>
-      </tr>
-      <tr>
-        <td><input type="text" name="Name" value="" id="name0" /></td>
+    <div class="buttons">
+    <button type ="button" value="Add Guest" onclick="add('table')">Add Guest</button>
+    <button onclick="myDeleteFunction()">Delete Guest</button><br>
+    </div>
+    <form method="post" action="https://script.google.com/macros/s/AKfycbw5eSYhVXNpg-1nF_VFRHVa9LIjfPkMISTlWjgYppPIzY22_Tk/exec">
+      <table id="table">
+        <tr><td>First &amp; Last Name:</td><td>Entreé</td></tr>
+        <tr>
+          <td><input type="text" name="Name" value="" id="name0" /></td>
         <td>
-            <select name="Entree" class="select-field" id="food">
-              <option value="" disabled selected>--Select--</option>
-              <option value="Salad">Veggie Salad</option>
-              <option value="Panini">Half Grilled Panini/Side Salad</option>
-              <option value="FarmPizza">Farm Pizza/Side Salad</option>
-            </select>
-          </input>
+          <select name="Entree" class="select-field" id="food">
+            <option value="" disabled selected>--Select--</option>
+            <option value="Salad">Veggie Salad</option>
+            <option value="Panini">Half Grilled Panini/Side Salad</option>
+            <option value="FarmPizza">Farm Pizza/Side Salad</option>
         </td>
-      </tr>
-    </table>
-    <button class="button-success pure-button button-xlarge">Send</button>
-
+        <tr>
+      </table>
+      <input type ="submit" id="submit" value="Submit"/>
+    </form>
     <br>
-    <script>
-    function myCreateFunction() {
-        var table = document.getElementById("myTable");
-        var rowCount = table.rows.length;
-        var row = table.insertRow(rowCount);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var newText  = document.createElement('input');
-        newText.type = 'text';
-        cell1.appendChild(newText);
-
-        var element2 = document.createElement("select");
-        var option1 = document.createElement("option");
-        var option2 = document.createElement("option");
-        var option3 = document.createElement("option");
-        option1.innerHTML = "Veggie Salad";
-        option1.value = "1";
-        option2.innerHTML = "Half Grilled Panini/Side Salad";
-        option2.value = "2";
-        option3.innerHTML = "Farm Pizza/Side Salad";
-        option3.value = "3";
-        element2.add(option1, null);
-        element2.add(option2, null);
-        element2.add(option3, null);
-        cell2.appendChild(element2);
-    }
-
-    function myDeleteFunction() {
-      var table = document.getElementById("myTable");
-      var rowCount = table.rows.length;
-      if (rowCount > 2) {
-      table.deleteRow(rowCount-1);
-      }
-    }
-    </script>
-    <script type="text/javascript">
-    var myForm = document.getElementById('gform');
-    formData = new FormData(myForm);
-    for(var pair of formData.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
-}
-    </script>
     <br>
-  </form>
-
+    </form>
   </div>
-  <div style="display:none;" id="thankyou_message">
-    <h2><em>Thanks</em> for contacting us!
-      We will get back to you soon!</h2>
-  </div>
-
 
 </body>
 </html>
