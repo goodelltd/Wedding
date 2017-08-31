@@ -65,12 +65,22 @@ h2 {
   height: 60px;
   width: 30px;
   border-radius: 20%;
-  display: relative;
+  display:inline-block;
   z-index: 2;
   background-color: midnightblue;
   color: white;
   align-items: center;
   outline: none;
+  display: none;
+}
+
+.galleryimgs:hover .button {
+    display: inline-block;
+}
+
+#leftbutton {
+  justify-content: left;
+  float: right;
 }
 
 .gallery img {
@@ -83,12 +93,12 @@ h2 {
   display: block;
 }
 
-#refuge, #flowers, #magnolia {
+/*#refuge, #flowers, #magnolia {
   -webkit-transform:rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  transform: rotate(180deg);*/
 }
 
 #date {
@@ -165,9 +175,4 @@ td,tr,th {
 .RSVP button {
   margin-bottom: 4rem;
   font:inherit
-}
-
-.galbutton button {
-  background-color: midnightblue;
-  color: white;
 }
