@@ -62,7 +62,7 @@ h2 {
 }
 
 .galleryimgs button {
-  height: 30px;
+  height: 60px;
   width: 30px;
   border-radius: 20%;
   display: relative;
@@ -70,6 +70,7 @@ h2 {
   background-color: midnightblue;
   color: white;
   align-items: center;
+  outline: none;
 }
 
 .gallery img {
