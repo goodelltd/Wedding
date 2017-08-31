@@ -45,18 +45,22 @@ h2 {
 
 .gallery {
   display: flex;
-  justify-content: center;
   align-items: center;
   min-height: 500px;
   flex-direction: column;
-  padding: 5rem 0;
+  padding-bottom: 3rem;
+  margin: 6rem 0;
 }
 
 .galleryimgs {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px;
+  padding: 10px 100px;
+}
+
+.title2 h2 {
+  padding-bottom: 4rem 0;
 }
 
 .galleryimgs button {
