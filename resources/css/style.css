@@ -20,7 +20,6 @@ header {
 
 header h1 {
   color: navy;
-
   font-size: 4.5rem;
   font-weight: 600;
   position: relative;
@@ -50,6 +49,7 @@ h2 {
   align-items: center;
   min-height: 500px;
   flex-direction: column;
+  padding: 5rem 0;
 }
 
 .galleryimgs {
@@ -57,17 +57,17 @@ h2 {
   justify-content: center;
   align-items: center;
   padding: 100px;
-  max-width: 700px;
-  max-height: 500px;
 }
 
 .galleryimgs button {
   height: 60px;
-  width: 30px;
-  border-radius: 20%;
+  width: 60px;
+  border-radius: 50%;
+  border: white 1px solid;
   display:inline-block;
+  font-size: 1.3rem;
   z-index: 2;
-  background-color: midnightblue;
+  background-color: rgba(1, 108, 190,1);
   color: white;
   align-items: center;
   outline: none;
@@ -86,19 +86,13 @@ h2 {
 .gallery img {
   display: none;
   overflow: hidden;
+  max-width: 600px;
+  max-height: 500px;
 }
 
 
 #coralcar {
   display: block;
-}
-
-/*#refuge, #flowers, #magnolia {
-  -webkit-transform:rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);*/
 }
 
 #date {
@@ -109,19 +103,24 @@ h2 {
 }
 
 .registry {
-  font-family: helvetica;
+  font-family: Helvetica;
   font-size: 20px;
-  background-color: #F2F2F2;
+  background-color: rgba(0, 23, 57,1);
+  color: bisque;
   display: block;
   padding: 80px;
 }
 
 .registry h4 {
-  font-family: Poiret;
+  font-family: 'Poiret One';
   font-size: 40px;
   vertical-align: middle;
   margin: 10px;
   padding: 5px;
+}
+
+.registry a {
+  color: ivory;
 }
 
 .about {

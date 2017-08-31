@@ -22,15 +22,18 @@
             }
             else if (i == 1) {
             var newentry = document.createElement("select");
+            var option0 = document.createElement("option");
             var option1 = document.createElement("option");
             var option2 = document.createElement("option");
             var option3 = document.createElement("option");
+            option0.innerHTML = "--Select--";
             option1.innerHTML = "Veggie Salad";
             option1.value = "Salad";
             option2.innerHTML = "Half Grilled Panini/Side Salad";
             option2.value = "Panini";
             option3.innerHTML = "Farm Pizza/Side Salad";
             option3.value = "FarmPizza";
+            newentry.add(option0, null);
             newentry.add(option1, null);
             newentry.add(option2, null);
             newentry.add(option3, null);
@@ -89,17 +92,13 @@
       <img class="mySlides" src="./resources/images/rockonrock2.jpg" style="width:100%">
       <button class="button" id="rightbutton" onclick="plusDivs(+1)">&#10095;</button>
       <br><br>
-      <!-- <div class="galbutton">
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-      </div> -->
     </div>
   </div>
 
   <div class="registry">
     <div class="content">
       <h4>Wedding Registry</h4>
-      <p>We are registered at <a href="https://www.amazon.com">Amazon</a> and <a href="https://www.target.com/">Target</a>. <br> <br>
+      <p>We are registered at <a target="_blank" href="https://www.amazon.com">Amazon</a> and <a target="_blank" href="https://www.target.com/">Target</a>. <br> <br>
         Thank you for supporting us in our new life together!</p>
     </div>
   </div>
