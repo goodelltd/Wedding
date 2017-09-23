@@ -1,181 +1,346 @@
+@font-face {
+    font-family: Arvil;
+    src: url("../Fonts/Arvil_Sans.ttf");
+}
+
+@font-face {
+    font-family: Knockout;
+    src: url("../Fonts/Knockout-HTF47-Bantamweight.otf");
+}
+
+@font-face {
+    font-family: Kreon;
+    src: url("../Fonts/Kreon-Regular.ttf");
+}
+
 body, html {
   padding: 0;
   margin: 0;
   text-align: center;
   font-family: 'Poiret One', cursive;
   font-size: 16px;
+  height: 100%;
 }
 
-header {
-  background: url("../images/beach.jpg") no-repeat center center fixed;
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+.main {
+  height: 100%;
+}
+
+/*Home Page*/
+.links a {
+  padding: 0 1.3rem;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 900;
+  line-height: 2;
+}
+
+.links a:visited {
+  color: inherit;
+}
+
+#home {
+  background: url("../images/beach.jpg") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   padding:0;
   margin-top: 0;
-  height: 800px;
-}
-
-
-header h1 {
-  color: navy;
-  font-size: 4.5rem;
-  font-weight: 600;
-  position: relative;
-  top: 180px;
-}
-
-h3 {
-  font-size:70px;
-  padding: 2rem;
-}
-
-h2 {
-  font-size: 40px;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .logo h1 {
   color: navy;
-  text-shadow: 2px 2px #fba087;
-  font-size: 7vw;
-  vertical-align: middle;
+  padding-bottom: 7rem;
 }
 
-.gallery {
+/*Story Page*/
+#storypage {
   display: flex;
   align-items: center;
-  min-height: 500px;
-  flex-direction: column;
-  padding-bottom: 3rem;
-  margin: 6rem 0;
-}
-
-.galleryimgs {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 10px 100px;
+  height: auto;
 }
 
-.title2 h2 {
-  padding-bottom: 4rem 0;
-}
-
-.galleryimgs button {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  border: white 1px solid;
-  display:inline-block;
-  font-size: 1.3rem;
-  z-index: 2;
-  background-color: rgba(1, 108, 190,1);
-  color: white;
-  align-items: center;
-  outline: none;
-  display: none;
-}
-
-.galleryimgs:hover .button {
-    display: inline-block;
-}
-
-#leftbutton {
-  justify-content: left;
-  float: right;
-}
-
-.gallery img {
-  display: none;
-  overflow: hidden;
-  max-width: 600px;
-  max-height: 500px;
-}
-
-
-#coralcar {
-  display: block;
-}
-
-#date {
-  font-size: 40px;
-  margin-top: 500px;
-  position: relative;
-  bottom: 30px;
-}
-
-.registry {
-  font-family: Helvetica;
-  font-size: 20px;
-  background-color: rgba(0, 23, 57,1);
-  color: bisque;
-  display: block;
-  padding: 80px;
-}
-
-.registry h4 {
-  font-family: 'Poiret One';
-  font-size: 40px;
-  vertical-align: middle;
-  margin: 10px;
-  padding: 5px;
-}
-
-.registry a {
-  color: ivory;
-}
-
-.about {
-  margin: 2rem auto;
-  padding: 5rem auto;
-}
-
-.about h2 {
-  padding: 2rem;
-}
-
-#amp {
-  font-size: 50px;
-}
-
-.registry h4 {
-  padding: 2rem;
-}
-
-.registry .content {
-  padding: 5rem;
-}
-
-.RSVP {
-  padding: 13.5rem 0;
+.stories {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+}
+
+.stories span {
   text-align: center;
+}
+
+.vicki {
+  display: flex;
   flex-direction: column;
-  height: 100%;
-  width: auto;
+  width: 50%;
+  text-align: justify;
+  padding: 3rem;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
-.rsvps {
+/*Photo Page*/
+#photopage {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  height: auto;
 }
 
-table {
-  margin-left:auto;
-  margin-right:auto;
-  margin-bottom: 1.5rem;
+.row {
+  padding: 10rem 0;
 }
 
-td,tr,th {
-  border: 1px black solid;
-  padding: .4rem;
-  text-align: left;
+.row img {
+  padding: .1rem;
+  margin: .3rem;
 }
 
-.RSVP button {
-  margin-bottom: 4rem;
-  font:inherit
+/*Location page*/
+
+#locationpage {
+  background-color: rgba(0, 23, 57, 1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#locationpage img {
+  max-width: 300px;
+  height: auto;
+}
+
+#locationpage span {
+  font-size: 3rem;
+  padding: .2rem 0;
+  font-family: Knockout;
+}
+
+.temple {
+  padding: 2rem;
+}
+
+.location {
+  width: 28%;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+#ceremony {
+  padding-bottom: 3rem;
+}
+
+.hawaii {
+  padding: 2rem;
+}
+
+/*Information section*/
+#infopage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+#infopage h2 {
+  font-family: Knockout;
+  font-size: 4rem;
+  padding-bottom: 3rem;
+}
+
+#infopage p {
+  font-weight: bold;
+}
+
+/*Registry Page*/
+#registrypage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0, 23, 57, 1);
+}
+
+#registrypage h2 {
+  font-family: Knockout;
+  font-size: 4rem;
+  padding-bottom: 3rem;
+}
+
+.words {
+  padding: 2rem 5rem;
+}
+
+.icons i {
+  padding: 2rem;
+  color: white;
+}
+
+.icons i:hover {
+  color: pink;
+}
+
+.fa-lg {
+  display: none;
+}
+
+/*RSVP Page*/
+#rsvppage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+}
+
+#rsvppage h2 {
+  font-family: Knockout;
+  font-size: 4rem;
+  padding-bottom: 1.5rem;
+}
+
+button {
+  padding: .5rem .5rem;
+  margin: 2rem 0;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 23, 57, 1);
+  color: white;
+}
+
+button span {
+  position: relative;
+}
+
+input {
+  margin: 1rem;
+}
+
+#submit {
+  padding: .5rem .5rem;
+  margin: 3rem 0;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 23, 57, 1);
+  color: white;
+}
+
+#name0 {
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  margin: 0 1.5rem;
+}
+
+#food {
+  padding: 2rem;
+  margin: 1.2rem;
+}
+
+#inputlabel {
+  font-family: Arvil;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  #locationpage img {
+    height: auto;
+    max-width: 210px;
+    margin: .5rem 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  /*.links span {
+    font-size: 1rem;
+    padding: 0 .5rem;
+  }*/
+
+  .links a {
+    padding: 0 .6rem;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 900;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  .stories {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .stories .vicki{
+    width: 100%;
+  }
+
+  .row img {
+    height: auto;
+    max-width: 210px;
+    margin: .5rem 0;
+  }
+
+  #locationpage img {
+    height: auto;
+    max-width: 110px;
+    margin: .5rem 0;
+  }
+
+  #locationpage p {
+    font-size: 3.5vw;
+    text-align: center;
+  }
+  #locationpage span {
+    text-align: center;
+    font-size: 4vw;
+  }
+
+  #registrypage h2 {
+    font-size: 10vw;
+    padding: 1rem;
+  }
+
+  #registrypage p {
+    font-size: 4vw;
+  }
+
+  .icons {
+    display: flex;
+    margin: .2rem;
+    padding: 1rem;
+  }
+
+  .fa-lg {
+    display: block;
+    padding: 0;
+  }
+
+  .fa-3x {
+    display: none;
+  }
+
+
 }

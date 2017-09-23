@@ -1,134 +1,239 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Vicki&amp;Tyler</title>
-  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
-  <script>
-    var names = ["Name", "Entree"];
-    function add(tableID) {
-        var table = document.getElementById(tableID);
-        var rowCount = table.rows.length;
-        var row = table.insertRow(rowCount);
-        var colCount = table.rows[0].cells.length;
-
-        for (var i=0; i<colCount; i++) {
-            var newcell = row.insertCell(i);
-            if (i == 0) {
-            var newentry  = document.createElement('input');
-            newentry.type = "text";
-            }
-            else if (i == 1) {
-            var newentry = document.createElement("select");
-            var option0 = document.createElement("option");
-            var option1 = document.createElement("option");
-            var option2 = document.createElement("option");
-            var option3 = document.createElement("option");
-            option0.innerHTML = "--Select--";
-            option1.innerHTML = "Veggie Salad";
-            option1.value = "Salad";
-            option2.innerHTML = "Half Grilled Panini/Side Salad";
-            option2.value = "Panini";
-            option3.innerHTML = "Farm Pizza/Side Salad";
-            option3.value = "FarmPizza";
-            newentry.add(option0, null);
-            newentry.add(option1, null);
-            newentry.add(option2, null);
-            newentry.add(option3, null);
-            }
-            newentry.name = names[i];
-            newcell.appendChild(newentry);
-            }
-        }
-        function myDeleteFunction() {
-          var table = document.getElementById("table");
+  <head>
+    <meta charset="utf-8">
+    <title>Vicki&amp;Tyler</title>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./resources/images/favicon.ico" type="image/x-icon">
+    <link href="./resources/css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+    <script type="text/javascript">
+      var names = ["Name", "Entree"];
+      function add(tableID) {
+          var table = document.getElementById(tableID);
           var rowCount = table.rows.length;
-          if (rowCount > 2) {
-          table.deleteRow(rowCount-1);
+          var row = table.insertRow(rowCount);
+          var colCount = table.rows[0].cells.length;
+
+          for (var i=0; i<colCount; i++) {
+              var newcell = row.insertCell(i);
+              if (i == 0) {
+              var newentry  = document.createElement('input');
+              newentry.type = "text";
+              }
+              else if (i == 1) {
+              var newentry = document.createElement("select");
+              var option0 = document.createElement("option");
+              var option1 = document.createElement("option");
+              var option2 = document.createElement("option");
+              var option3 = document.createElement("option");
+              option0.innerHTML = "--Select--";
+              option1.innerHTML = "Veggie Salad";
+              option1.value = "Salad";
+              option2.innerHTML = "Half Grilled Panini/Side Salad";
+              option2.value = "Panini";
+              option3.innerHTML = "Farm Pizza/Side Salad";
+              option3.value = "FarmPizza";
+              newentry.add(option0, null);
+              newentry.add(option1, null);
+              newentry.add(option2, null);
+              newentry.add(option3, null);
+              }
+              newentry.name = names[i];
+              newcell.appendChild(newentry);
+              }
           }
-        }
-  </script>
-  <script type="text/javascript">
-    var slideIndex = 1;
-    showDivs(slideIndex);
+          function myDeleteFunction() {
+            var table = document.getElementById("table");
+            var rowCount = table.rows.length;
+            if (rowCount > 2) {
+            table.deleteRow(rowCount-1);
+            }
+          }
+    </script>
 
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
+  </head>
+  <body>
+    <div id="home" class="main">
+      <div class="links">
+        <span><a href="#storypage">Story</a></span>
+        <span><a href="#photopage">Photos</a></span>
+        <span><a href="#locationpage">Location</a></span>
+        <span><a href="#infopage">Information</a></span>
+        <span><a href="#registrypage">Resgistry</a></span>
+        <span><a href="#rsvppage">RSVP</a></span>
 
-    function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex-1].style.display = "block";
-    }
-  </script>
-</head>
-<body>
-  <header>
-    <h1 class="logo">V<span id="amp">&amp;</span>T</h1>
-    <h2 id="date">11.3.17</h2>
-  </header>
+      </div>
 
-  <div class="gallery">
-    <div class="title2">
-    <h2>About Us</h2> <br><br>
+      <div class="logo">
+        <h1>Vicki&amp;Tyler</h1>
+      </div>
+      <div class="date">
+        <h2>11.3.17</h2>
+      </div>
     </div>
-    <div class="galleryimgs">
-      <button class="button" id="leftbutton" onclick="plusDivs(-1)">&#10094;</button>
-      <img id="coralcar" class="mySlides" src="./resources/images/stairsfinal.png" style="width:100%">
-      <img id="flowers" class="mySlides" src="./resources/images/flowers2.jpg" style="width:100%">
-      <img id="magnolia" class="mySlides" src="./resources/images/magnolia2.jpg" style="width:100%">
-      <img id="refuge" class="mySlides" src="./resources/images/refuge2.jpg" style="width:100%">
-      <img id="southwest" class="mySlides" src="./resources/images/southwest2.jpg" style="width:100%">
-      <img class="mySlides" src="./resources/images/coralcar2.jpg" style="width:100%">
-      <img class="mySlides" src="./resources/images/vickiflowers2.jpg" style="width:100%">
-      <img class="mySlides" src="./resources/images/rockonrock2.jpg" style="width:100%">
-      <button class="button" id="rightbutton" onclick="plusDivs(+1)">&#10095;</button>
-      <br><br>
-    </div>
-  </div>
 
-  <div class="registry">
-    <div class="content">
-      <h4>Wedding Registry</h4>
-      <p>We are registered at <a target="_blank" href="https://www.amazon.com">Amazon</a> and <a target="_blank" href="https://www.target.com/">Target</a>. <br> <br>
-        Thank you for supporting us in our new life together!</p>
+    <div id="storypage" class="main">
+      <div class="outer">
+        <div class="storytitle">
+          <h2>Our Story</h2>
+        </div>
+        <div class="stories">
+          <div class="vicki">
+          <span>Vicki's point of view:</span>
+          <p>The story of Tyler and Vicki finding each other is as timeless as
+            Romeo and Juliet or Ben and Jerry. Tyler was living life in the fast
+            lane Midland, TX style as a geophysicist for Crownquest, and Vicki was
+            spending her days as a nurse taking care of St. George’s finest and
+            sickest residents at the local hospital. Their stars would align Labor
+            Day Weekend when Tyler had flown into town to visit Vicki’s cousins,
+            Kim and Tom Lund. <br>
+            Kim and Tom knew that both Vicki and Tyler were single, attractive,
+            and their height to weight ratio seemed complimentary, so they
+            immediately schemed to get them together for a game night.<br>
+            Vicki mistook Tyler’s rugged good looks for those of an astronaut, and
+            Tyler was mesmerized by Vicki’s spray tan and flowing blonde hair
+            (blondes are the big leagues), so without further ado, the two started
+            a long-distance relationship that blossomed into the website you are
+            visiting today. They are so excited and grateful to be together at
+            last!
+          </p>
+        </div>
+        <div class="vicki">
+          <span>Tyler's point of view:</span>
+          <p>I was just visiting my close friends, Kim and TJ, when Kim brought up that
+            she had a cousin who was single. She then showed me a picture of
+            her and I said, "She's hot and you know, Midland is right next door. Plus blondes are
+            the big leagues." Then, fearing a long-distance relationship, I had second
+            thoughts.<br>The night before I was about to leave St. George, I spent the night
+            playing cards with Vicki and her family, and she didn't mind that I was cheating.
+            I thought, "This girl is pretty chill. I would totally date her if she didn't
+            live a billion miles away." I then left town not thinking too much more about it.
+            After a lot of effort by Kim and TJ to bring us
+            together, Vicki emailed me. This eventually turned into text messages,
+            which eventually became phone calls, and then video calls. After a few months
+            of digital communication, we finally met up again on Thanksgiving and
+            immediately hit if off. That Thanksgiving weekend is when I figured out
+            that I was going to marry Vicki. And so here we are.
+          </p>
+        </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="RSVP">
-    <h3>RSVP</h3>
-    <div class="buttons">
-    <button type ="button" value="Add Guest" onclick="add('table')">Add Guest</button>
-    <button onclick="myDeleteFunction()">Delete Guest</button><br>
+    <div id="photopage" class="main">
+      <div class="allimages">
+        <div class="container">
+          <div class="row">
+            <div id="btn" class="col-lg-3 col-sm-6 col-xs-6 photo1">
+              <a href="./resources/images/flowers3.jpg" data-title="One of our first trips. We found a field full of flowers and took this photo." data-lightbox="roadtrip"><img class="img-fluid img-thumbnail" src="./resources/images/flowers3.jpg" alt=""></a>
+            </div>
+            <div id="btn" class="col-lg-3 col-sm-6 col-xs-6 photo1">
+              <a href="./resources/images/chile2.jpg" data-title="Our very first trip together, which happened to be in Chile. If you noticed that we aren't smiling in this photo, you're right. We had just found out that the locals leave a certain waste product in these waters." data-lightbox="roadtrip"><img class="img-fluid img-thumbnail" src="./resources/images/chile2.jpg" alt=""></a>
+            </div>
+            <div id="btn" class="col-lg-3 col-sm-6 col-xs-6 photo1">
+              <a href="./resources/images/lubbock2.jpg" data-title="Turns out these are real smiles. We actually really like each other." data-lightbox="roadtrip"><img class="img-fluid img-thumbnail" src="./resources/images/lubbock2.jpg" alt=""></a>
+            </div>
+            <div id="btn" class="col-lg-3 col-sm-6 col-xs-6 photo1">
+              <a href="./resources/images/magnolia3.jpg" data-title="This picture was taken right after we met with Chip and Joanna, with whom we made some suggested business changes." data-lightbox="roadtrip"><img class="img-fluid img-thumbnail" src="./resources/images/magnolia3.jpg" alt=""></a>
+            </div>
+            <div id="btn" class="col-lg-3 col-sm-6 col-xs-6 photo1">
+              <a href="./resources/images/NYC.jpg" data-title="View from the top of One World Trade Center. This trip was mainly for Vicki to enjoy the city before she moves to the West Texas desert." data-lightbox="roadtrip"><img class="img-fluid img-thumbnail" src="./resources/images/NYC.jpg" alt=""></a>
+            </div>
+            <div id="btn" class="col-lg-3 col-sm-6 col-xs-6 photo1">
+              <a href="./resources/images/turtle2.jpg" data-title="The Midland Wildlife Preserve is a place we visit every season to enjoy nature. It's also the only place to do that. This turtle proceeded to emit an unbearable stench after the picture was taken." data-lightbox="roadtrip"><img class="img-fluid img-thumbnail" src="./resources/images/turtle2.jpg" alt=""></a>
+            </div>
+            <div id="btn" class="col-lg-3 col-sm-6 col-xs-6 photo1">
+              <a href="./resources/images/vickiflowers2.jpg" data-title="Every spring Texas is adorned with beautiful bluebonnets and occasionally even prettier women. Here is one of them." data-lightbox="roadtrip"><img class="img-fluid img-thumbnail" src="./resources/images/vickiflowers2.jpg" alt=""></a>
+            </div>
+            <div id="btn" class="col-lg-3 col-sm-6 col-xs-6 photo1">
+              <a href="./resources/images/stairsfinal2.jpg" data-title="We got in trouble from the photographer for actually kissing after this photo was taken." data-lightbox="roadtrip"><img class="img-fluid img-thumbnail" src="./resources/images/stairsfinal2.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <form method="post" action="https://script.google.com/macros/s/AKfycbw5eSYhVXNpg-1nF_VFRHVa9LIjfPkMISTlWjgYppPIzY22_Tk/exec">
-      <table id="table">
-        <tr><td>First &amp; Last Name:</td><td>Entreé</td></tr>
-        <tr>
-          <td><input type="text" name="Name" value="" id="name0" /></td>
-        <td>
-          <select name="Entree" class="select-field" id="food">
-            <option value="" disabled selected>--Select--</option>
-            <option value="Salad">Veggie Salad</option>
-            <option value="Panini">Half Grilled Panini/Side Salad</option>
-            <option value="FarmPizza">Farm Pizza/Side Salad</option>
-        </td>
-        <tr>
-      </table>
-      <input type ="submit" id="submit" value="Submit"/>
-    </form>
-    <br>
-    <br>
-    </form>
-  </div>
 
-</body>
+    <div id="locationpage" class="main">
+      <div class="temple">
+        <img src="./resources/images/temple.png" alt="">
+      </div>
+      <div class="location">
+        <div id="ceremony" class="info">
+          <span>CEREMONY</span>
+          <p>Laie Hawaii Temple<br>Laie, HI 96762</p>
+        </div>
+        <div id="reception" class="info">
+          <span>RECEPTION</span>
+          <p>56-800 Kamehameha Hwy,<br>Kahuku, HI 96731</p>
+        </div>
+      </div>
+      <div class="hawaii">
+        <img src="./resources/images/hawaii3.png" alt="">
+      </div>
+    </div>
+
+    <div id="infopage" class="main">
+      <h2>Information</h2>
+      <p>Fly into Honolulu's Daniel K. Inouye International Airport (HNL)</p>
+      <p>We recommend booking a room or a house through <a target="_blank" href="https://www.airbnb.com/s/Laie--HI--United-States/homes?refinements%5B%5D=for_you&allow_override%5B%5D=&s_tag=g_3t8Gah">Airbnb</a> or
+      staying nearby at the
+      <a target="_blank" href="https://www.marriott.com/hotels/travel/hnloa-courtyard-oahu-north-shore/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2">
+      Courtyard by Marriott.</a></p>
+    </div>
+
+    <div id="registrypage" class="main">
+      <div class="words">
+        <h2>Wedding Registry</h2>
+        <p>Your presence, thoughts, and prayers on our special day are more than enough and would be greatly appreciated.
+          If however you would like to bless us in addition to this, we are registered at
+          <a target="_blank" href="https://www.target.com/gift-registry/giftgiver?registryId=17b9071636344aadb48ffd0ab883c107#1">Target</a>
+          and <a target="_blank" href="https://www.amazon.com/wedding/tyler-goodell-vicki-tracy-laie-november-2017/registry/595GMACX1E5H">Amazon.</a></p>
+        <p>Thank you for supporting us in our new life together!</p>
+      </div>
+      <div class="icons">
+        <a target="_blank" href="https://www.target.com/gift-registry/giftgiver?registryId=17b9071636344aadb48ffd0ab883c107#1"><i class="fa fa-dot-circle-o fa-3x" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.amazon.com/wedding/tyler-goodell-vicki-tracy-laie-november-2017/registry/595GMACX1E5H"><i class="fa fa-amazon fa-3x" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.target.com/gift-registry/giftgiver?registryId=17b9071636344aadb48ffd0ab883c107#1"><i class="fa fa-dot-circle-o fa-lg" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.amazon.com/wedding/tyler-goodell-vicki-tracy-laie-november-2017/registry/595GMACX1E5H"><i class="fa fa-amazon fa-lg" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div id="rsvppage" class="main">
+      <h2>RSVP</h2>
+      <div class="buttons">
+        <button type ="button" value="Add Guest" onclick="add('table')"><span>Add Guest</span></button>
+        <button onclick="myDeleteFunction()">Delete Guest</button><br>
+      </div>
+      <form method="post" action="https://script.google.com/macros/s/AKfycbw5eSYhVXNpg-1nF_VFRHVa9LIjfPkMISTlWjgYppPIzY22_Tk/exec">
+        <table id="table">
+          <tr id="inputlabel"><td>First &amp; Last Name:</td><td>Entreé</td></tr>
+          <tr>
+            <td><input type="text" name="Name" value="" id="name0" /></td>
+            <td>
+              <select name="Entree" class="select-field" id="food">
+                <option value="" disabled selected>--Select--</option>
+                <option value="Salad">Veggie Salad</option>
+                <option value="Panini">Half Grilled Panini/Side Salad</option>
+                <option value="FarmPizza">Farm Pizza/Side Salad</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <input type ="submit" id="submit" value="Submit"/>
+      </form>
+    </div>
+
+    <script src="./resources/js/lightbox-plus-jquery.js"></script>
+    <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+    </script>
+  </body>
 </html>
